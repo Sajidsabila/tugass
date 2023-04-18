@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header-wrapper">
+    <nav class="container">
+        <a href="home.html" class="home">Home</a>
+        <a href="profile.html" class="home">My Profile</a>
+        <a href="#" class="home">Portofolio</a>
+        <a href="#" class="home">Contact</a>
+    </nav>
+</header>
+
+    <div class="header">
+        <h3>Hi <span id="nama"></span>,Welcome to my website</h3>
+    </div>
+
+    <div class="banner">
+    <center>
+        <img class="imgslide" src="gambar/gambar 1.jpg">
+        <img class="imgslide" src="gambar/gambar 2.jpg">
+        <img class="imgslide" src="gambar/gambar 3.jpg">
+    </center>
+    <div  class="button-slide">
+        <button class="button1" onclick="plusDivs(-1)">Previous</button>
+        <button  class="button2" onclick="plusDivs(1)">Next</button>
+    </div>
+    </div>
+
+    <div class="content-facilitation">
+        <h3>Our facilitation</h3>
+        <div class="image-content">
+            <img src="gambar/html.jpg" class="imagee">
+            <img src="gambar/css.jpg" class="imagee">
+            <img src="gambar/js.jpg" class="imagee">
+        </div>
+    </div>
+
+<main class="main-content">
+    <div class="form-container" onSubmit="return validateForm()">
+        <h2>Message us</h2>
+
+        <form name="message-form" onsubmit="return validateForm()">
+            <label>Nama:</label>
+            <input placeholder="Nama" type="text" name="full-name" />
+            <br />
+            <label>Tanggal lahir:</label>
+            <input type="date" name="birth-date" />
+            <br />
+
+            <label>Jenis kelamin:</label>
+            <div class="radio-container">
+                <input type="radio" id="male" name="gender" value="Laki-laki" />
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="Perempuan" />
+                <label for="female">Perempuan</label>
+            </div>
+            <br />
+
+            <label>Pesan:</label>
+            <textarea placeholder="Pesan" name="messages"></textarea>
+            <br />
+
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+
+    <div class="result-container">
+        <h2>Message Detail</h2>
+        <div class="message-detail">
+            <p><strong>Curerrent Time   :</strong> <span id="current-time"></span></p>
+            <p><strong>Nama:</strong> <span id="sender-full-name"></span></p>
+            <p><strong>Tanggal lahir:</strong> <span id="sender-birth-date"></span></p>
+            <p><strong>Jenis Kelamin:</strong> <span id="sender-gender"></span></p>
+            <p><strong>Pesan:</strong> <span id="sender-messages"></span></p>
+        </div>
+    </div>
+</main>
+
+<div class="footer">
+    <p>&copy; Muh Esa Susilo Sajid Sabilla</p>
+</div>
+<script src="javascipt.js">
+</script>
+</body>
+</html>
